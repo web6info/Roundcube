@@ -32,4 +32,8 @@ Abilitare l'accesso del webserver a roundcube creando nella directory di localho
 # cd /var/www
 # ln -s /usr/share/roundcube/ roundcube
 ```
-Adesso puntare il browser
+Adesso puntare il browser su
+```
+http://localhost/roundcube/installer/
+```
+e seguire le istruzioni dello script di installazione.
