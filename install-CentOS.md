@@ -27,3 +27,9 @@ Creare il database:
 # mysql roundcubemail < SQL/mysql.initial.sql
 
 ```
+Abilitare l'accesso del webserver a roundcube creando nella directory di localhost il collegamento simbolico:
+```
+# cd /var/www
+# ln -s /usr/share/roundcube/ roundcube
+```
+Adesso puntare il browser
