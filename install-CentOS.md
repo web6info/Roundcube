@@ -17,23 +17,25 @@ Questo installerà Roundcube con cartella di configurazione in:
 ```
 La cartella dei plugin sarà invece posizionata in:
 ```
-/usr/share/roundcube/plugins/
+/usr/share/roundcubemail/plugins/
 ```
 Creare il database:
 ```
+# cd /usr/share/doc/roundcubemail-<version>/SQL
+
 # mysql
 > CREATE DATABASE roundcubemail /*!40101 CHARACTER SET utf8 COLLATE utf8_general_ci */;
 > GRANT ALL PRIVILEGES ON roundcubemail.* TO roundcube@localhost
     IDENTIFIED BY 'password';
 > quit
 
-# mysql roundcubemail < SQL/mysql.initial.sql
+# mysql roundcubemail < mysql.initial.sql
 
 ```
 Abilitare l'accesso del webserver a roundcube creando nella directory di localhost il collegamento simbolico:
 ```
 # cd /var/www
-# ln -s /usr/share/roundcube/ roundcube
+# ln -s /usr/share/roundcubemail/ roundcube
 ```
 Adesso puntare il browser su
 ```
